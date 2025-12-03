@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Analytics } from '@vercel/analytics/react';
+import Analytics from './pages/Analytics';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import Layout from './components/Layout';
 import Notification from './components/Notification';
 import Mascot from './components/Mascot';
@@ -43,7 +44,7 @@ export default function App(){
           {page==='scheduler' && <Scheduler scheduler={scheduler} setScheduler={setScheduler} notify={notify} />}
           {page==='analytics' && <Analytics analytics={analytics} />}
           return (
-<Analytics />
+<VercelAnalytics />
         </div>
       </div>
 
