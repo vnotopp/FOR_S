@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import AnalyticsPage from './pages/Analytics';  // renamed your analytics page
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 
 import Layout from './components/Layout';
 import Notification from './components/Notification';
@@ -66,10 +65,6 @@ export default function App(){
           {page==='scheduler' && <Scheduler scheduler={scheduler} setScheduler={setScheduler} notify={notify} />}
           {page==='analytics' && <AnalyticsPage analytics={analytics} />}
         </div>
-
-        {/* Vercel Analytics HERE */}
-        <VercelAnalytics />
-
       </div>
 
       <Mascot onClick={()=> notify("🐰 Keep going — you've got this!")} />
